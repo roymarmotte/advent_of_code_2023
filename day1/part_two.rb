@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 letter_nbs = %w[zero one two three four five six seven eight nine]
 
 numbers = File.readlines('./input.txt').map do |line|
