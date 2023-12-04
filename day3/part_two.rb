@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-CHAR_NOT_SPE = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', nil].freeze
+GEAR = '*'
 input = File.read('input.txt').split("\n")
 
 def find_end_number(line, x, way)
@@ -36,7 +36,7 @@ end
 
 results = input.each_with_index.flat_map do |line, y|
   line.split('').each_with_index.map do |char, x|
-    next unless char == '*'
+    next unless char == GEAR
 
     numbers = check_around(input, x, y)
     next if numbers.count != 2
