@@ -15,7 +15,6 @@ def get_begin_number(input, x, y)
 end
 
 def check_around(input, x, y)
-  # pp "pos #{y} #{x}"
   line = input[y]
   char = line&.split('')&.dig(x)
   return false unless (0..9).map(&:to_s).include? char
